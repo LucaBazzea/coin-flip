@@ -17,19 +17,17 @@ def value_assign():
                 option1 = input("Heads: ")
             while option2 == " ":
                 option2 = input("Tails: ")
-        else:
-                print("No")
 
 value_assign()
 
 def coin_flip():
 
-    clear_output()
-    flip = random.randint(0,1)
+        clear_output()
+        flip = random.randint(0,1)
 
-    if flip == 0:
+        if flip == 0:
             print(f"Heads {option1}")
-    else:
+        else:
             print(f"Tails {option2}")
 
 coin_flip()
