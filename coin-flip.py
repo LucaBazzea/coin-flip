@@ -1,6 +1,4 @@
 import random
-from IPython.display import clear_output
-
 
 def value_assign():
 
@@ -17,12 +15,12 @@ def value_assign():
                 option1 = input("Heads: ")
             while option2 == " ":
                 option2 = input("Tails: ")
+        return option1, option2
 
-value_assign()
 
 def coin_flip():
 
-        clear_output()
+        option1, option2 = value_assign()
         flip = random.randint(0,1)
 
         if flip == 0:
