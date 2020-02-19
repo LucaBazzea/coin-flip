@@ -1,41 +1,64 @@
 import random
 import time
+import os
 
 def value_assign():
 
-        assign = " "
+    assign = " "
 
-        while assign != "y" and assign != "n":
-                assign = input("Would you like to assign values to the coin? [y,n]: ").lower()
+    while assign != "y" and assign != "n":
+        assign = input("Would you like to assign values to the coin? [y,n]: ").lower()
     
-        option1 = " "
-        option2 = " "
+    option1 = " "
+    option2 = " "
     
-        if assign == "y":
-            while option1 == " ":
-                option1 = input("Heads: ")
-            while option2 == " ":
-                option2 = input("Tails: ")
-        return option1, option2
+    if assign == "y":
+        while option1 == " ":
+            option1 = input("Heads: ")
+        while option2 == " ":
+            option2 = input("Tails: ")
+    return option1, option2
 
+def end_menu():
+    
+    menu = " "
+    flip_count = 1
+
+    time.sleep(1)
+
+    while menu != "1" and menu != "2" and menu != "3":
+        print(" ")
+        print("Would you like to...")
+        menu = input("[1] Flip again [2] Make a new coin [3] Close the app: ")
+
+    if menu == "1":
+        print('Flip again')
+        coin_flip()
+        flip_count += 1
+    elif menu == "2":
+        coin_flip()
+    else:
+        print("Good Bye")
+        quit()
 
 def coin_flip():
 
-        option1, option2 = value_assign()
-        flip = random.randint(0,1)
+    option1, option2 = value_assign()
 
-        print("---Flipping Coin---")
+    flip = random.randint(0,1)
 
-        time.sleep(2.5)
+    print("---Flipping Coin---")
+    time.sleep(0.75)
+    print(" ")
+    time.sleep(0.75)
+    print(" ")
+    time.sleep(0.75)
 
-        if flip == 0:
-            print(f"Heads {option1}")
-        else:
-            print(f"Tails {option2}")
+    if flip == 0:
+        print(f"Heads {option1}")
+    else:
+        print(f"Tails {option2}")
 
+    end_menu()
+    
 coin_flip()
-
-
-# input = ("would you like to flip again? [y:n]")
-# would you like to start a new coin [y:n]
-# 
