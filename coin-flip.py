@@ -1,4 +1,5 @@
 import random
+import time
 
 def value_assign():
 
@@ -23,9 +24,18 @@ def coin_flip():
         option1, option2 = value_assign()
         flip = random.randint(0,1)
 
+        print("---Flipping Coin---")
+
+        time.sleep(2.5)
+
         if flip == 0:
             print(f"Heads {option1}")
         else:
             print(f"Tails {option2}")
 
 coin_flip()
+
+
+# input = ("would you like to flip again? [y:n]")
+# would you like to start a new coin [y:n]
+# 
