@@ -22,22 +22,19 @@ def value_assign():
 def end_menu():
     
     menu = " "
-    flip_count = 1
 
     time.sleep(1)
 
-    while menu != "1" and menu != "2" and menu != "3":
+    while menu != "1" and menu != "3":
         print(" ")
         print("Would you like to...")
-        menu = input("[1] Flip again [2] Make a new coin [3] Close the app: ")
+        menu = input("[1] Flip again [3] Close the app: ")
 
     if menu == "1":
-        print('Flip again')
-        coin_flip()
-        flip_count += 1
-    elif menu == "2":
         coin_flip()
     else:
+        print(" ")
+        time.sleep(1)
         print("Good Bye")
         quit()
 
